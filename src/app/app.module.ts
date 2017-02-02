@@ -4,10 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { MinichatComponent } from './minichat/minichat.component';
+import { MinichatstoreComponent } from './minichatstore.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MinichatComponent,
+    MinichatstoreComponent
   ],
   imports: [
     BrowserModule,

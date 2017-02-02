@@ -1,0 +1,21 @@
+
+
+	<section class="overlay-container">
+		<form id="frm" class="compose-message module-active">
+			<label for="compose-message" class="header">Compose Message</label>
+			<input type="text" id="name" class="name" placeholder="Name" #username>
+			<textarea class="message" id="message" placeholder="message" #usermessage></textarea>
+			<input type="submit" class="send" value="send" (click)="send()" >
+		</form>
+		<div class="message-feed"  [ngClass]="{'module-active': display}">
+      <a href="#" class="compose"(click)="goback()" value="compose message">compose</a>
+			<ul id="message-list" class="message-list">
+        <li class="list-item" *ngFor= "let task of lists">
+					<h3 class="username">@{{task.username}}</h3>
+					<p class="message">
+						{{task.usermessage}}
+					</p>
+				</li>
+        </ul>
+    </div>
+	</section>
